@@ -1,0 +1,8 @@
+-Crear un documento en anlgular con los comandos
+-Copiar el archivo app en los archivos generados 
+-Correr el programa con el comando ng serve e ingresar mediante la direccion dada
+
+
+
+Enlace del video
+https://www.loom.com/share/6da0ed42d57b43d59d4cbdbac4405997 

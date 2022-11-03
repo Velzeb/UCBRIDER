@@ -1,0 +1,76 @@
+<mat-sidenav-container class="sidenav-container"  >
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false" >
+    
+    <mat-nav-list class="main-menu">
+  
+            <ul>
+                <li>
+                    <a mat-list-item href="#">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+                            Home
+                        </span>
+                    </a>
+                  
+                </li>
+                <li class="has-subnav">
+                    <a mat-list-item href="tema3">
+                        <i class="fa fa-laptop fa-2x"></i>
+                        <span class="nav-text">
+                            Celulares
+                        </span>
+                    </a>
+                    
+                </li>
+                <li class="has-subnav">
+                    <a mat-list-item href="tema2">
+                       <i class="fa fa-list fa-2x"></i>
+                        <span class="nav-text">
+                            Formulario Web
+                        </span>
+                    </a>
+                    
+                </li>
+               
+                <li class="has-subnav">
+                    <a mat-list-item href="tema1">
+                        <i class="fa fa-phone fa-2x"></i>
+                        <span class="nav-text">
+                            Contactos
+                        </span>
+                    </a>
+                </li>
+                
+            </ul>
+
+           
+        
+         </mat-nav-list>
+  </mat-sidenav>
+ 
+
+        
+ <mat-sidenav-content>
+         
+    <mat-toolbar color="#212121">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        
+      </button>
+      <span>TECNO-CEL</span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+       
+       
+        
+   
+</mat-sidenav-container>
